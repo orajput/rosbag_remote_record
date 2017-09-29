@@ -253,7 +253,7 @@ if __name__ == '__main__':
     parser.add_option("-t", "--triggerscope",
                       action="store",
                       dest="triggerscope",
-                      help="Set the root scope/topic for remote control (default:/meka/rosbagremote/record)\
+                      help="Set the root scope/topic for remote control (default:/mcl/rosbagremote/record)\
                        another topic <root>/named provides a way to query a new bag file name while starting")
     parser.add_option("-f", "--filename",
                       action="store",
@@ -274,7 +274,7 @@ if __name__ == '__main__':
         print ">>> No inscope, filename given or middleware provided --> see help."
         sys.exit(1)
     if not options.triggerscope:
-        options.triggerscope = "/meka/rosbagremote/record"
+        options.triggerscope = "/mcl/rosbagremote/record"
     if options.middleware.lower() == "ros":
         if ROS_SUPPORT:
             rospy.init_node('rosbag_remote_record', anonymous=True)

@@ -12,15 +12,15 @@ python rosbag_remote_record.py -m ros -i /xtion/rgb/image_raw /something/else /a
 ### triggering the recording start/stop with ROS
 
 ```bash
-rostopic pub /meka/rosbagremote/record std_msgs/Bool True
-rostopic pub /meka/rosbagremote/record std_msgs/Bool False
+rostopic pub /mcl/rosbagremote/record std_msgs/Bool True
+rostopic pub /mcl/rosbagremote/record std_msgs/Bool False
 ```
 
 ### triggering the recording start/stop with RSB
 
 ```bash
-rsb-toolscl0.15 send 'true' 'socket:/meka/rosbagremote/record'
-rsb-toolscl0.15 send 'false' 'socket:/meka/rosbagremote/record'
+rsb-toolscl0.15 send 'true' 'socket:/mcl/rosbagremote/record'
+rsb-toolscl0.15 send 'false' 'socket:/mcl/rosbagremote/record'
 ```
 
 Also look at:
@@ -36,7 +36,7 @@ python rosbag_remote_record.py --help
 ### Default Remote Listen Scope/Topic:
 
 ```bash
-/meka/rosbagremote/record
+/mcl/rosbagremote/record
 ```
 
 for user specified Remote Listen Scope/Topic use -t option
